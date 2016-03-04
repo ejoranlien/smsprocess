@@ -28,6 +28,8 @@ General Usage
 -------------
 
 Import one XML file
-===================
-
-smsProcess("backup.xml", keepUnsent = TRUE) \#Import all XML files in working directory with default options smsBatch() \#Import multiple files, with custom options smsBatch(c("backup1.xml", "backup2.xml"), keepUnsent = TRUE, noMMS =TRUE)
+smsProcess("backup.xml", keepUnsent = TRUE)
+Import all XML files in working directory with default options
+smsBatch()
+Import multiple files, with custom options
+smsBatch(c("backup1.xml", "backup2.xml"), keepUnsent = TRUE, noMMS =TRUE)
