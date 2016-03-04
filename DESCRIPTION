@@ -1,0 +1,16 @@
+Package: smsprocess
+Type: Package
+Title: Import and Clean SMS Backup Data
+Version: 0.1
+Date: 2016-02-28
+Authors@R: person("Erik", "Joranlien", email = "ejoranlien@gmail.com", role = c("aut", "cre"))
+Description: smsprocess includes basic functions for importing and cleaning
+    raw XML backups of text message data produced by the Android app SMS Backup &
+    Restore.
+License: CC0
+LazyData: TRUE
+Imports:
+    dplyr,
+    XML,
+    lubridate
+RoxygenNote: 5.0.1
