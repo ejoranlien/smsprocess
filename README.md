@@ -53,7 +53,7 @@ General Usage
 
 Import one XML file
 
--smsProcess("backup.xml", keepUnsent = TRUE)
+`smsProcess("backup.xml", keepUnsent = TRUE)`
 
 Import all XML files in working directory with default options
 
