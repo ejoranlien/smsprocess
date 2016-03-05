@@ -42,18 +42,23 @@ Using smsProcess() and smsBatch()
 
 `smsBatch()` has a few options:
 
-\*files can take either a character vector of muplitple file names, ie c("sms1.xml", "sms2.xml)"), or (by default) the input "all" will pull and process all XML files in the working directory.
+-files can take either a character vector of muplitple file names, ie c("sms1.xml", "sms2.xml)"), or (by default) the input "all" will pull and process all XML files in the working directory.
 
-\*removeDuplicates When TRUE (default), duplicate rows are removed. This is necessary when backup files overlap.
+-removeDuplicates When TRUE (default), duplicate rows are removed. This is necessary when backup files overlap.
 
-\*keepUnsent, charCount, and noMMS are passed to smsProcess() to set the options available to that function.
+-keepUnsent, charCount, and noMMS are passed to smsProcess() to set the options available to that function.
 
 General Usage
 -------------
 
 Import one XML file
- -smsProcess("backup.xml", keepUnsent = TRUE)
+
+-smsProcess("backup.xml", keepUnsent = TRUE)
+
 Import all XML files in working directory with default options
- -smsBatch()
+
+-smsBatch()
+
 Import multiple files, with custom options
- -smsBatch(c("backup1.xml", "backup2.xml"), keepUnsent = TRUE, noMMS =TRUE)
+
+-smsBatch(c("backup1.xml", "backup2.xml"), keepUnsent = TRUE, noMMS =TRUE)
