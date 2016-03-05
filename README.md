@@ -20,17 +20,21 @@ Using smsProcess() and smsBatch()
 
 smsProcess() is the core function: it imports and cleans the raw XML file so that it will be useful in R. To use it, simply make sure the file you want to import is in the working directory, then run smsProcess("filename.xml")
 
-smsProcess() has several options:
+smsProcess() has several options: -file: A character string with the name of the backup file, ie "sms.xml"
 
--file: A character string with the name of the backup file, ie "sms.xml" -keepUnsent: When TRUE, this keeps Failed and Draft messages. FALSE is default. -charCount: When TRUE (default), this adds a column counting the number of characters in each text. -noMMS: Set to TRUE if your backup file has no MMS data in it. This skips the block of code processing MMS data, thereby avoiding errors. If you encounter "variable not found" errors, try setting this to TRUE.
+-keepUnsent: When TRUE, this keeps Failed and Draft messages. FALSE is default.
+
+-charCount: When TRUE (default), this adds a column counting the number of characters in each text.
+
+-noMMS: Set to TRUE if your backup file has no MMS data in it. This skips the block of code processing MMS data, thereby avoiding errors. If you encounter "variable not found" errors, try setting this to TRUE.
 
 smsBatch() is just a convenience wrapper for processing multiple backup files (either from multiple phones, or backups from different times.) It just calls lapply, rbind, and arrange on smsProcess().
 
-smsBatch() has a few options:
+smsBatch() has a few options: \*files can take either a character vector of muplitple file names, ie c("sms1.xml", "sms2.xml)"), or (by default) the input "all" will pull and process all XML files in the working directory.
 
--files can take either a character vector of muplitple file names, ie c("sms1.xml", "sms2.xml)"), or (by default) the input "all" will pull and process all XML files in the working directory.
- -removeDuplicates When TRUE (default), duplicate rows are removed. This is necessary when backup files overlap.
- -keepUnsent, charCount, and noMMS are passed to smsProcess() to set the options available to that function.
+\*removeDuplicates When TRUE (default), duplicate rows are removed. This is necessary when backup files overlap.
+
+\*keepUnsent, charCount, and noMMS are passed to smsProcess() to set the options available to that function.
 
 General Usage
 -------------
