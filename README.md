@@ -28,7 +28,9 @@ Using smsProcess() and smsBatch()
 
 `smsProcess()` is the core function: it imports and cleans the raw XML file so that it will be useful in R. To use it, simply make sure the file you want to import is in the working directory, then run smsProcess("filename.xml")
 
-`smsProcess()` has several options: -file: A character string with the name of the backup file, ie "sms.xml"
+`smsProcess()` has several options:
+
+-file: A character string with the name of the backup file, ie "sms.xml"
 
 -keepUnsent: When TRUE, this keeps Failed and Draft messages. FALSE is default.
 
