@@ -9,7 +9,7 @@ To use them, you will need the XML backup files produced by the Android app "SMS
 smsprocess can be installed from github using the devtools package:
 
     ```R
-    install_github(ejoranlien/smsprocess)
+    install_github("ejoranlien/smsprocess")
     ````
 
 smsprocess relies on the following packages, which will be installed if you don't have them: dplyr, XML, lubridate
